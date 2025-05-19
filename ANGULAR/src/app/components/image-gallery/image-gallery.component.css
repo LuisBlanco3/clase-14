@@ -1,0 +1,127 @@
+/* Estilo general del contenedor */
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+}
+
+/* Título principal */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+/* Cargando / error */
+p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Botón de reintento */
+.error button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.error button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Galería de imágenes */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.grid div {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.grid div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Detalles debajo de la imagen */
+.grid h1 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.grid p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 0.25rem;
+}
+
+/* Modal de detalle */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #dc2626;
+}
